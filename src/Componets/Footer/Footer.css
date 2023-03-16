@@ -1,0 +1,21 @@
+.phone-menu {
+    background: linear-gradient(90deg, #8e2de2, #4a00e0);
+    padding: 5px 0px;
+    border-radius: 20px;
+}
+
+.phone-menu ul li {
+    margin-left: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.phone-menu ul li:first-child{
+    margin-left: 0px;
+}
+
+.phone-menu ul li svg {
+    font-size: 18px;
+    color: white;
+    font-weight: 700;
+}

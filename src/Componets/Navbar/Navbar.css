@@ -1,0 +1,39 @@
+.main-navbar {
+    background: white;
+}
+
+.main-navbar .navbar-container {
+    height: 60px;
+}
+
+.main-navbar .navbar-container .search {
+    padding: 5px 10px;
+    border-radius: 20px;
+    width: 300px;
+}
+
+.main-navbar .navbar-container .search input {
+    width: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+}
+
+.main-navbar .navbar-container .nav-profile-btn {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    border: 1px solid #4a00e0;
+    overflow: hidden;
+}
+
+.main-navbar .navbar-container .nav-profile-btn img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.dark-navbar {
+    background: #03001C;
+    box-shadow: 0px 0px 8px 0px rgba(255, 255, 255, 0.75);
+}
