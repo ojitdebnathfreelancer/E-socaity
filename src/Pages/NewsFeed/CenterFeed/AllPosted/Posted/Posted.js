@@ -2,12 +2,10 @@ import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { BsThreeDots } from "react-icons/bs";
 import { eSocityContext } from "../../../../../ContextProvider/ContextProvider";
-import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
-import { FaRegCommentAlt } from "react-icons/fa";
 import Reaction from "../Reaction/Reaction";
 import Comments from "../Comments/Comments";
 
-const Posted = () => {
+const Posted = ({ post }) => {
   const [dotMenu, setDotMenu] = useState(false);
   const { darkOn } = useContext(eSocityContext);
 
@@ -58,22 +56,22 @@ const Posted = () => {
         </div>
         {/* user info and delete button  */}
         <div>
-          <img
-            className="mt-2 max-h-[400px] w-[100%] object-cover"
-            src="https://u4d2z7k9.rocketcdn.me/wp-content/uploads/2021/10/rsz_sk_rahaman_hossain_1-min.jpg"
-            alt="post-img"
-          />
-          <p
-            className={`mt-2 lg:text-[16px] md:text-[14px] text-[13px] text-justify first-letter:uppercase ${
-              darkOn ? "text-white" : "text-black"
-            }`}
-          >
-            natural beauty is one with attractive features and looking
-            attractive naturally without any makeup. It means your lips are
-            beautiful without any lipstick or lip balm, your eyes are beautiful
-            without any kajal or eye makeup, your face is shiny without any
-            compact. Everybody has natural beauty.
-          </p>
+          {post?.img && (
+            <img
+              className="mt-2 max-h-[400px] w-[100%] object-cover"
+              src={post?.img}
+              alt="post-img"
+            />
+          )}
+          {post?.text && (
+            <p
+              className={`mt-2 lg:text-[16px] md:text-[14px] text-[13px] text-justify first-letter:uppercase ${
+                darkOn ? "text-white" : "text-black"
+              }`}
+            >
+              {post?.text}
+            </p>
+          )}
         </div>
         {/* content  */}
       </div>
